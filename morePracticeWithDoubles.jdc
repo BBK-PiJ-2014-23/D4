@@ -1,0 +1,12 @@
+toPay(100000, 10, 10);
+
+void toPay (double mortgage, double years, double interestRate) {
+	double total = mortgage * (1 + interestRate / 100.0);
+	double annually = total / years;
+	double interest = total - mortgage;
+	double yearsOfInterest = interest / annually;
+	
+	println("Total amount to be paid: " + total);
+	println("Money to be paid every year: " + annually);
+	println("Number of years before the interest is paid: " + yearsOfInterest);
+}
