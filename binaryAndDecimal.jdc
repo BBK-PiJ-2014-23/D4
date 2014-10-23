@@ -1,6 +1,9 @@
 int test = binary2decimal("100011");
 println(test);
 
+String test2 = decimal2binary(35);
+println(test2);
+
 int binary2decimal(String binary) {
 	int decimal = 0;
 	for (int i = 0; i < binary.length(); i++) {
@@ -10,4 +13,21 @@ int binary2decimal(String binary) {
 		}
 	}
 	return decimal;
+}
+
+static String decimal2binary(int decimal) {
+	String temp = "";
+	while (decimal > 0) {
+		if (decimal % 2 == 1) {
+			temp += "1";
+		} else {
+			temp += "0";
+		}
+		decimal /= 2;
+	}
+	String binary = "";
+	for (int i = temp.length() - 1; i >= 0; i--) {
+		binary += temp.charAt(i);
+	}
+	return binary;
 }
