@@ -1,0 +1,13 @@
+int test = binary2decimal("100011");
+println(test);
+
+int binary2decimal(String binary) {
+	int decimal = 0;
+	for (int i = 0; i < binary.length(); i++) {
+		int temp = Integer.parseInt(binary.substring(i, i + 1));
+		if (temp == 1) {
+			decimal += Math.pow(2, binary.length() - 1 - i);
+		}
+	}
+	return decimal;
+}
