@@ -5,7 +5,7 @@ Point testPoint2 = new Point();
 testPoint2.x = 1;
 testPoint2.y = 1;
 
-testPoint1.moveTo(2, 2);
+testPoint1.moveTo(testPoint2);
 println(testPoint1.x);
 println(testPoint1.y);
 
@@ -27,7 +27,8 @@ class Point {
 	}
 	
 	void moveTo(Point p) {
-		;
+		this.x = p.x;
+		this.y = p.y;
 	}
 	
 	Point close() {
