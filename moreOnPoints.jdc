@@ -5,9 +5,9 @@ Point testPoint2 = new Point();
 testPoint2.x = 1;
 testPoint2.y = 1;
 
-testPoint1.moveTo(testPoint2);
-println(testPoint1.x);
-println(testPoint1.y);
+Point testPoint3 = testPoint2.duplicate();
+println(testPoint2.x);
+println(testPoint2.y);
 
 class Point {
 	double x;
@@ -31,7 +31,7 @@ class Point {
 		this.y = p.y;
 	}
 	
-	Point close() {
+	Point duplicate() {
 		return this;
 	}
 	
