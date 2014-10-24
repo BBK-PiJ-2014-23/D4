@@ -5,7 +5,9 @@ Point testPoint2 = new Point();
 testPoint2.x = 1;
 testPoint2.y = 1;
 
-println(testPoint2.distanceToOrigin());
+testPoint1.moveTo(2, 2);
+println(testPoint1.x);
+println(testPoint1.y);
 
 class Point {
 	double x;
@@ -20,7 +22,8 @@ class Point {
 	}
 	
 	void moveTo(double x, double y) {
-		;
+		this.x = x;
+		this.y = y;
 	}
 	
 	void moveTo(Point p) {
