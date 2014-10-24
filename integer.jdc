@@ -1,0 +1,29 @@
+
+
+class Integer2 {
+	int valuel;
+	
+	int getValue() {
+		return 0;
+	}
+	
+	void setValue(int x) {
+		;
+	}
+	
+	boolean isEven() {
+		return false;
+	}
+	
+	boolean isOdd() {
+		return false;
+	}
+	
+	void prettyPrint() {
+		;
+	}
+	
+	String toString2() {
+		return "0";
+	}
+}
