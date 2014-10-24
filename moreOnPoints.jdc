@@ -1,11 +1,18 @@
+Point testPoint1 = new Point();
+testPoint1.x = 0;
+testPoint1.y = 0;
+Point testPoint2 = new Point();
+testPoint2.x = 1;
+testPoint2.y = 1;
 
+println(testPoint1.distanceTo(testPoint2));
 
 class Point {
 	double x;
 	double y;
 	
 	double distanceTo(Point p) {
-		return 1;
+		return Math.sqrt(Math.pow(this.x - p.x, 2) + Math.pow(this.y - p.y, 2));
 	}
 	
 	double distanceToOrigin() {
