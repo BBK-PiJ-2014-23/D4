@@ -5,9 +5,9 @@ Point testPoint2 = new Point();
 testPoint2.x = 1;
 testPoint2.y = 1;
 
-Point testPoint3 = testPoint2.duplicate();
-println(testPoint2.x);
-println(testPoint2.y);
+Point testPoint3 = testPoint2.opposite();
+println(testPoint3.x);
+println(testPoint3.y);
 
 class Point {
 	double x;
@@ -36,6 +36,9 @@ class Point {
 	}
 	
 	Point opposite() {
-		return this;
+		Point opposed = new Point();
+		opposed.x = - this.x;
+		opposed.y = - this.y;
+		return opposed;
 	}
 }
