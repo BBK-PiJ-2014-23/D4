@@ -1,29 +1,37 @@
 
 
 class Integer2 {
-	int valuel;
+	int value;
 	
 	int getValue() {
-		return 0;
+		return value;
 	}
 	
 	void setValue(int x) {
-		;
+		value = x;
 	}
 	
 	boolean isEven() {
-		return false;
+		if (value % 2 == 0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
 	boolean isOdd() {
-		return false;
+		if (value % 2 != 0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
 	void prettyPrint() {
-		;
+		print(value);
 	}
 	
 	String toString2() {
-		return "0";
+		return Integer.toString(value);
 	}
 }
