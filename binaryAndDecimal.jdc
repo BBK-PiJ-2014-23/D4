@@ -1,8 +1,17 @@
-int test = binary2decimal("100011");
-println(test);
-
-String test2 = decimal2binary(35);
-println(test2);
+print("Please enter (1) for binary to decimal conversion or (2) for decimal to binary conversion: ");
+String str = System.console().readLine();
+if (str.equals("1")) {
+	print("Please enter a binary: ");
+	str = System.console().readLine();
+	println(binary2decimal(str));
+} else if (str.equals("2")) {
+	print("Please enter a decimal: ");
+	int num = Integer.parseInt(System.console().readLine());
+	println(decimal2binary(num));
+} else {
+	println("Invalid input");
+}
+	
 
 int binary2decimal(String binary) {
 	int decimal = 0;
